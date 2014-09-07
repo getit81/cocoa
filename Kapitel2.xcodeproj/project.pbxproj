@@ -22,6 +22,7 @@
 		453654E419BCD62800D59BBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 453654E219BCD62800D59BBF /* InfoPlist.strings */; };
 		453654E619BCD62800D59BBF /* Kapitel2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 453654E519BCD62800D59BBF /* Kapitel2Tests.m */; };
 		45EC4D3B19BCDFBF007E84FE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D3A19BCDFBF007E84FE /* Model.m */; };
+		45EC4D3E19BCE2D3007E84FE /* Droid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D3D19BCE2D3007E84FE /* Droid.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		453654E519BCD62800D59BBF /* Kapitel2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kapitel2Tests.m; sourceTree = "<group>"; };
 		45EC4D3919BCDFBF007E84FE /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = ../Model.h; sourceTree = "<group>"; };
 		45EC4D3A19BCDFBF007E84FE /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = ../Model.m; sourceTree = "<group>"; };
+		45EC4D3C19BCE2D3007E84FE /* Droid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Droid.h; sourceTree = "<group>"; };
+		45EC4D3D19BCE2D3007E84FE /* Droid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Droid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				453654CC19BCD62700D59BBF /* Main.storyboard */,
 				453654CF19BCD62700D59BBF /* ViewController.h */,
 				453654D019BCD62700D59BBF /* ViewController.m */,
+				45EC4D3C19BCE2D3007E84FE /* Droid.h */,
+				45EC4D3D19BCE2D3007E84FE /* Droid.m */,
 				453654D219BCD62700D59BBF /* Images.xcassets */,
 				453654C119BCD62700D59BBF /* Supporting Files */,
 			);
@@ -257,6 +262,7 @@
 				453654D119BCD62700D59BBF /* ViewController.m in Sources */,
 				453654CB19BCD62700D59BBF /* AppDelegate.m in Sources */,
 				453654C719BCD62700D59BBF /* main.m in Sources */,
+				45EC4D3E19BCE2D3007E84FE /* Droid.m in Sources */,
 				45EC4D3B19BCDFBF007E84FE /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
