@@ -21,6 +21,7 @@
 		453654DC19BCD62800D59BBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453654BE19BCD62700D59BBF /* UIKit.framework */; };
 		453654E419BCD62800D59BBF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 453654E219BCD62800D59BBF /* InfoPlist.strings */; };
 		453654E619BCD62800D59BBF /* Kapitel2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 453654E519BCD62800D59BBF /* Kapitel2Tests.m */; };
+		4598200019BCEE74006CD5A9 /* NSString+ReverseString.m in Sources */ = {isa = PBXBuildFile; fileRef = 45981FFF19BCEE74006CD5A9 /* NSString+ReverseString.m */; };
 		45EC4D3B19BCDFBF007E84FE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D3A19BCDFBF007E84FE /* Model.m */; };
 		45EC4D3E19BCE2D3007E84FE /* Droid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D3D19BCE2D3007E84FE /* Droid.m */; };
 		45EC4D4119BCE70F007E84FE /* ProtocolDroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D4019BCE70F007E84FE /* ProtocolDroid.m */; };
@@ -58,6 +59,8 @@
 		453654E119BCD62800D59BBF /* Kapitel2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kapitel2Tests-Info.plist"; sourceTree = "<group>"; };
 		453654E319BCD62800D59BBF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		453654E519BCD62800D59BBF /* Kapitel2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kapitel2Tests.m; sourceTree = "<group>"; };
+		45981FFE19BCEE74006CD5A9 /* NSString+ReverseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ReverseString.h"; sourceTree = "<group>"; };
+		45981FFF19BCEE74006CD5A9 /* NSString+ReverseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ReverseString.m"; sourceTree = "<group>"; };
 		45EC4D3919BCDFBF007E84FE /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = ../Model.h; sourceTree = "<group>"; };
 		45EC4D3A19BCDFBF007E84FE /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = ../Model.m; sourceTree = "<group>"; };
 		45EC4D3C19BCE2D3007E84FE /* Droid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Droid.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				45EC4D4219BCE739007E84FE /* AstroDroid.h */,
 				45EC4D4319BCE739007E84FE /* AstroDroid.m */,
 				45EC4D3A19BCDFBF007E84FE /* Model.m */,
+				45981FFE19BCEE74006CD5A9 /* NSString+ReverseString.h */,
+				45981FFF19BCEE74006CD5A9 /* NSString+ReverseString.m */,
 				453654C919BCD62700D59BBF /* AppDelegate.h */,
 				453654CA19BCD62700D59BBF /* AppDelegate.m */,
 				453654CC19BCD62700D59BBF /* Main.storyboard */,
@@ -281,6 +286,7 @@
 				453654C719BCD62700D59BBF /* main.m in Sources */,
 				45EC4D3E19BCE2D3007E84FE /* Droid.m in Sources */,
 				45EC4D3B19BCDFBF007E84FE /* Model.m in Sources */,
+				4598200019BCEE74006CD5A9 /* NSString+ReverseString.m in Sources */,
 				45EC4D4419BCE739007E84FE /* AstroDroid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
