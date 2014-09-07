@@ -8,6 +8,9 @@
 
 #import "Model.h"
 #import "Droid.h"
+#import "ProtocolDroid.h"
+#import "AstroDroid.h"
+#import "Wookie.h"
 
 @implementation Model {
     @private
@@ -37,8 +40,16 @@
 
 - (void)updateDroids:(int)inValue {
     if (inValue > [objects count]) {
+        int theRemainder = inValue % 3;
         Droid *theDroid;
-        theDroid = [[Droid alloc] initWithID:inValue];
+        
+        if (theRemainder == 0) {
+            theDroid = [[Droid alloc] initWithID:inValue];
+        } else if (theRemainder == 1) {
+            theDroid = [[ProtocolDroid alloc] initWithID:inValue];
+        } else {
+            theDroid = [[AstroDroid alloc] initWithID:inValue];
+        }
         [objects addObject:theDroid];
     } else {
         [objects removeLastObject];
@@ -47,6 +58,16 @@
 
 - (int)countOfObjects {
     return (int)[objects count];
+}
+
+- (void)listDroids {
+    Wookie *theWookie = [[Wookie alloc] initWithName:@"Chewbacca"];
+    
+    [objects addObject:theWookie];
+    NSLog(@"[+] Current droids (%d):", [self countOfObjects]);
+    for (id anItem in objects) {
+        [anItem sayName];
+    }
 }
 
 @end

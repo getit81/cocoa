@@ -16,4 +16,5 @@
 - (instancetype)initWithName:(NSString *)inName;
 - (void)updateDroids:(int)inValue;
 - (int)countOfObjects;
+- (void)listDroids;
 @end

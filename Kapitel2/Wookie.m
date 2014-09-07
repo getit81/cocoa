@@ -1,26 +1,25 @@
 //
-//  Droid.m
+//  Wookie.m
 //  Kapitel2
 //
 //  Created by David Brünner on 07.09.14.
 //  Copyright (c) 2014 David Brünner. All rights reserved.
 //
 
-#import "Droid.h"
+#import "Wookie.h"
 
-@implementation Droid
-@synthesize droidID;
+@implementation Wookie
 
-- (id)initWithID:(NSInteger)inID {
+- (id)initWithName:(NSString *)inName {
     self = [super init];
     if (self) {
-        self.droidID = [NSString stringWithFormat:@"0xDEADBEEF%i", inID];
+        self.name = inName;
     }
     NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
     return self;
 }
 
 - (void)sayName {
-    NSLog(@"[+] %@.%@: %@", self, NSStringFromSelector(_cmd), self.droidID);
+    NSLog(@"[+] %@.%@: %@", self, NSStringFromSelector(_cmd), self.name);
 }
 @end

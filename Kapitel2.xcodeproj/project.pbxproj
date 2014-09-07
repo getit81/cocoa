@@ -23,6 +23,9 @@
 		453654E619BCD62800D59BBF /* Kapitel2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 453654E519BCD62800D59BBF /* Kapitel2Tests.m */; };
 		45EC4D3B19BCDFBF007E84FE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D3A19BCDFBF007E84FE /* Model.m */; };
 		45EC4D3E19BCE2D3007E84FE /* Droid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D3D19BCE2D3007E84FE /* Droid.m */; };
+		45EC4D4119BCE70F007E84FE /* ProtocolDroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D4019BCE70F007E84FE /* ProtocolDroid.m */; };
+		45EC4D4419BCE739007E84FE /* AstroDroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D4319BCE739007E84FE /* AstroDroid.m */; };
+		45EC4D4719BCEABC007E84FE /* Wookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4D4619BCEABC007E84FE /* Wookie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,12 @@
 		45EC4D3A19BCDFBF007E84FE /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = ../Model.m; sourceTree = "<group>"; };
 		45EC4D3C19BCE2D3007E84FE /* Droid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Droid.h; sourceTree = "<group>"; };
 		45EC4D3D19BCE2D3007E84FE /* Droid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Droid.m; sourceTree = "<group>"; };
+		45EC4D3F19BCE70F007E84FE /* ProtocolDroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolDroid.h; sourceTree = "<group>"; };
+		45EC4D4019BCE70F007E84FE /* ProtocolDroid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolDroid.m; sourceTree = "<group>"; };
+		45EC4D4219BCE739007E84FE /* AstroDroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstroDroid.h; sourceTree = "<group>"; };
+		45EC4D4319BCE739007E84FE /* AstroDroid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstroDroid.m; sourceTree = "<group>"; };
+		45EC4D4519BCEABC007E84FE /* Wookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wookie.h; sourceTree = "<group>"; };
+		45EC4D4619BCEABC007E84FE /* Wookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wookie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +128,16 @@
 			isa = PBXGroup;
 			children = (
 				45EC4D3919BCDFBF007E84FE /* Model.h */,
+				45EC4D3F19BCE70F007E84FE /* ProtocolDroid.h */,
+				45EC4D4019BCE70F007E84FE /* ProtocolDroid.m */,
+				45EC4D4219BCE739007E84FE /* AstroDroid.h */,
+				45EC4D4319BCE739007E84FE /* AstroDroid.m */,
 				45EC4D3A19BCDFBF007E84FE /* Model.m */,
 				453654C919BCD62700D59BBF /* AppDelegate.h */,
 				453654CA19BCD62700D59BBF /* AppDelegate.m */,
 				453654CC19BCD62700D59BBF /* Main.storyboard */,
+				45EC4D4519BCEABC007E84FE /* Wookie.h */,
+				45EC4D4619BCEABC007E84FE /* Wookie.m */,
 				453654CF19BCD62700D59BBF /* ViewController.h */,
 				453654D019BCD62700D59BBF /* ViewController.m */,
 				45EC4D3C19BCE2D3007E84FE /* Droid.h */,
@@ -259,11 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45EC4D4119BCE70F007E84FE /* ProtocolDroid.m in Sources */,
+				45EC4D4719BCEABC007E84FE /* Wookie.m in Sources */,
 				453654D119BCD62700D59BBF /* ViewController.m in Sources */,
 				453654CB19BCD62700D59BBF /* AppDelegate.m in Sources */,
 				453654C719BCD62700D59BBF /* main.m in Sources */,
 				45EC4D3E19BCE2D3007E84FE /* Droid.m in Sources */,
 				45EC4D3B19BCDFBF007E84FE /* Model.m in Sources */,
+				45EC4D4419BCE739007E84FE /* AstroDroid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

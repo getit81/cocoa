@@ -30,6 +30,9 @@
                                 <state key="normal" title="List">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="listModel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5vM-eu-hg3"/>
+                                </connections>
                             </button>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YOa-0z-PAm">
                                 <rect key="frame" x="113" y="431" width="94" height="29"/>
