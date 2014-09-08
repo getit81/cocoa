@@ -11,7 +11,7 @@
 @implementation NSString (ReverseString)
 
 - (NSString *)reversedString {
-    int theLength = [self length];
+    int theLength = (int)[self length];
     NSMutableString *theReverse = [[NSMutableString alloc] init];
     
     for (int i = theLength - 1; i >= 0; i--) {

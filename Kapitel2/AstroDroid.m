@@ -13,7 +13,7 @@
 - (instancetype)initWithID:(NSInteger)inID {
     self = [super init];
     if (self) {
-        self.droidID = [NSString stringWithFormat:@"0xBEEFCAFE%i", inID];
+        self.droidID = [NSString stringWithFormat:@"0xBEEFCAFE%i", (int)inID];
     }
     NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
     return self;

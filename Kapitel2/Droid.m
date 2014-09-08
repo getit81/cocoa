@@ -14,7 +14,7 @@
 - (id)initWithID:(NSInteger)inID {
     self = [super init];
     if (self) {
-        self.droidID = [NSString stringWithFormat:@"0xDEADBEEF%i", inID];
+        self.droidID = [NSString stringWithFormat:@"0xDEADBEEF%i", (int)inID];
     }
     NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
     return self;
