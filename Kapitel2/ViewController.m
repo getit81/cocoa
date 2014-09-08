@@ -21,6 +21,10 @@
     [self writeLog:NSStringFromSelector(_cmd)];
     self.model = [[Model alloc] initWithName:@"Lorem Ipsum"];
     [self writeLog:[NSString stringWithFormat:@"Model.name: %@", [self.model name]]];
+    
+    Log *theLog = [[Log alloc] init];
+    [theLog setDelelgate:self];
+    [theLog logToConsole:[self.model name]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,5 +50,9 @@
 
 - (IBAction)listModel:(id)sender {
     [self.model listDroids];
+}
+
+- (void)logDidFinishLogging:(Log *)inLog {
+    [self writeLog:@"Finished logging to console"];
 }
 @end
