@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 ___FULLUSERNAME___. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "RunDetailsViewController.h"
 
-@interface DetailViewController ()
+@interface RunDetailsViewController ()
 - (void)configureView;
 @end
 
-@implementation DetailViewController
+@implementation RunDetailsViewController
 
 #pragma mark - Managing the detail item
 

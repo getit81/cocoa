@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "MasterViewController.h"
+#import "MyRunsViewController.h"
 
 @implementation AppDelegate
 
@@ -20,7 +20,7 @@
 {
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
+    MyRunsViewController *controller = (MyRunsViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
@@ -133,6 +133,7 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }    

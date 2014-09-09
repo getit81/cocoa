@@ -16,8 +16,8 @@
 		451616E519BF1A3C00346DC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 451616E419BF1A3C00346DC9 /* AppDelegate.m */; };
 		451616E819BF1A3C00346DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451616E619BF1A3C00346DC9 /* Main.storyboard */; };
 		451616EB19BF1A3C00346DC9 /* Runner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 451616E919BF1A3C00346DC9 /* Runner.xcdatamodeld */; };
-		451616EE19BF1A3C00346DC9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451616ED19BF1A3C00346DC9 /* MasterViewController.m */; };
-		451616F119BF1A3C00346DC9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451616F019BF1A3C00346DC9 /* DetailViewController.m */; };
+		451616EE19BF1A3C00346DC9 /* MyRunsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451616ED19BF1A3C00346DC9 /* MyRunsViewController.m */; };
+		451616F119BF1A3C00346DC9 /* RunDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451616F019BF1A3C00346DC9 /* RunDetailsViewController.m */; };
 		451616F319BF1A3C00346DC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451616F219BF1A3C00346DC9 /* Images.xcassets */; };
 		451616FA19BF1A3C00346DC9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451616F919BF1A3C00346DC9 /* XCTest.framework */; };
 		451616FB19BF1A3C00346DC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451616D219BF1A3C00346DC9 /* Foundation.framework */; };
@@ -25,6 +25,7 @@
 		451616FD19BF1A3C00346DC9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451616D819BF1A3C00346DC9 /* CoreData.framework */; };
 		4516170519BF1A3C00346DC9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4516170319BF1A3C00346DC9 /* InfoPlist.strings */; };
 		4516170719BF1A3C00346DC9 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516170619BF1A3C00346DC9 /* RunnerTests.m */; };
+		4516171219BF1C6C00346DC9 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516171119BF1C6C00346DC9 /* Run.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +52,18 @@
 		451616E419BF1A3C00346DC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		451616E719BF1A3C00346DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		451616EA19BF1A3C00346DC9 /* Runner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runner.xcdatamodel; sourceTree = "<group>"; };
-		451616EC19BF1A3C00346DC9 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		451616ED19BF1A3C00346DC9 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		451616EF19BF1A3C00346DC9 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		451616F019BF1A3C00346DC9 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		451616EC19BF1A3C00346DC9 /* MyRunsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRunsViewController.h; sourceTree = "<group>"; };
+		451616ED19BF1A3C00346DC9 /* MyRunsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRunsViewController.m; sourceTree = "<group>"; };
+		451616EF19BF1A3C00346DC9 /* RunDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunDetailsViewController.h; sourceTree = "<group>"; };
+		451616F019BF1A3C00346DC9 /* RunDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunDetailsViewController.m; sourceTree = "<group>"; };
 		451616F219BF1A3C00346DC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		451616F819BF1A3C00346DC9 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		451616F919BF1A3C00346DC9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4516170219BF1A3C00346DC9 /* RunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RunnerTests-Info.plist"; sourceTree = "<group>"; };
 		4516170419BF1A3C00346DC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4516170619BF1A3C00346DC9 /* RunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunnerTests.m; sourceTree = "<group>"; };
+		4516171019BF1C6C00346DC9 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
+		4516171119BF1C6C00346DC9 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,12 +129,13 @@
 				451616E319BF1A3C00346DC9 /* AppDelegate.h */,
 				451616E419BF1A3C00346DC9 /* AppDelegate.m */,
 				451616E619BF1A3C00346DC9 /* Main.storyboard */,
-				451616EC19BF1A3C00346DC9 /* MasterViewController.h */,
-				451616ED19BF1A3C00346DC9 /* MasterViewController.m */,
-				451616EF19BF1A3C00346DC9 /* DetailViewController.h */,
-				451616F019BF1A3C00346DC9 /* DetailViewController.m */,
+				451616EC19BF1A3C00346DC9 /* MyRunsViewController.h */,
+				451616ED19BF1A3C00346DC9 /* MyRunsViewController.m */,
+				451616EF19BF1A3C00346DC9 /* RunDetailsViewController.h */,
+				451616F019BF1A3C00346DC9 /* RunDetailsViewController.m */,
 				451616F219BF1A3C00346DC9 /* Images.xcassets */,
 				451616E919BF1A3C00346DC9 /* Runner.xcdatamodeld */,
+				4516171319BF1C7900346DC9 /* Models */,
 				451616DB19BF1A3C00346DC9 /* Supporting Files */,
 			);
 			path = Runner;
@@ -164,6 +168,15 @@
 				4516170319BF1A3C00346DC9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4516171319BF1C7900346DC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4516171019BF1C6C00346DC9 /* Run.h */,
+				4516171119BF1C6C00346DC9 /* Run.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				451616F119BF1A3C00346DC9 /* DetailViewController.m in Sources */,
-				451616EE19BF1A3C00346DC9 /* MasterViewController.m in Sources */,
+				451616F119BF1A3C00346DC9 /* RunDetailsViewController.m in Sources */,
+				451616EE19BF1A3C00346DC9 /* MyRunsViewController.m in Sources */,
 				451616E519BF1A3C00346DC9 /* AppDelegate.m in Sources */,
+				4516171219BF1C6C00346DC9 /* Run.m in Sources */,
 				451616E119BF1A3C00346DC9 /* main.m in Sources */,
 				451616EB19BF1A3C00346DC9 /* Runner.xcdatamodeld in Sources */,
 			);
