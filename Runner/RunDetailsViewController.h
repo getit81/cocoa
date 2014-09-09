@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Run.h"
 
 @interface RunDetailsViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) Run *runItem;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

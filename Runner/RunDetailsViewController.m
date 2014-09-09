@@ -16,10 +16,10 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setRunItem:(id)newDetailItem
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (_runItem != newDetailItem) {
+        _runItem = newDetailItem;
         
         // Update the view.
         [self configureView];
@@ -30,8 +30,8 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+    if (self.runItem) {
+        self.detailDescriptionLabel.text = [self.runItem.date description];
     }
 }
 

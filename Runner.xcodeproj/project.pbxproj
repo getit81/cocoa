@@ -26,6 +26,7 @@
 		4516170519BF1A3C00346DC9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4516170319BF1A3C00346DC9 /* InfoPlist.strings */; };
 		4516170719BF1A3C00346DC9 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516170619BF1A3C00346DC9 /* RunnerTests.m */; };
 		4516171219BF1C6C00346DC9 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516171119BF1C6C00346DC9 /* Run.m */; };
+		451A943E19BF299800FC2076 /* RunTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451A943D19BF299800FC2076 /* RunTimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		4516170619BF1A3C00346DC9 /* RunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunnerTests.m; sourceTree = "<group>"; };
 		4516171019BF1C6C00346DC9 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
 		4516171119BF1C6C00346DC9 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
+		451A943C19BF299800FC2076 /* RunTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimerViewController.h; sourceTree = "<group>"; };
+		451A943D19BF299800FC2076 /* RunTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +132,7 @@
 				451616E319BF1A3C00346DC9 /* AppDelegate.h */,
 				451616E419BF1A3C00346DC9 /* AppDelegate.m */,
 				451616E619BF1A3C00346DC9 /* Main.storyboard */,
-				451616EC19BF1A3C00346DC9 /* MyRunsViewController.h */,
-				451616ED19BF1A3C00346DC9 /* MyRunsViewController.m */,
-				451616EF19BF1A3C00346DC9 /* RunDetailsViewController.h */,
-				451616F019BF1A3C00346DC9 /* RunDetailsViewController.m */,
+				451A943F19BF29EC00FC2076 /* ViewController */,
 				451616F219BF1A3C00346DC9 /* Images.xcassets */,
 				451616E919BF1A3C00346DC9 /* Runner.xcdatamodeld */,
 				4516171319BF1C7900346DC9 /* Models */,
@@ -177,6 +177,19 @@
 				4516171119BF1C6C00346DC9 /* Run.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		451A943F19BF29EC00FC2076 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				451616EC19BF1A3C00346DC9 /* MyRunsViewController.h */,
+				451616ED19BF1A3C00346DC9 /* MyRunsViewController.m */,
+				451616EF19BF1A3C00346DC9 /* RunDetailsViewController.h */,
+				451616F019BF1A3C00346DC9 /* RunDetailsViewController.m */,
+				451A943C19BF299800FC2076 /* RunTimerViewController.h */,
+				451A943D19BF299800FC2076 /* RunTimerViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +293,7 @@
 				451616EE19BF1A3C00346DC9 /* MyRunsViewController.m in Sources */,
 				451616E519BF1A3C00346DC9 /* AppDelegate.m in Sources */,
 				4516171219BF1C6C00346DC9 /* Run.m in Sources */,
+				451A943E19BF299800FC2076 /* RunTimerViewController.m in Sources */,
 				451616E119BF1A3C00346DC9 /* main.m in Sources */,
 				451616EB19BF1A3C00346DC9 /* Runner.xcdatamodeld in Sources */,
 			);
@@ -486,6 +500,7 @@
 				4516170C19BF1A3C00346DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4516170D19BF1A3C00346DC9 /* Build configuration list for PBXNativeTarget "RunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +509,7 @@
 				4516170F19BF1A3C00346DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
