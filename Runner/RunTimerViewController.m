@@ -9,7 +9,8 @@
 #import "RunTimerViewController.h"
 
 @interface RunTimerViewController ()
-
+@property (nonatomic, strong) NSTimer *runTimer;
+@property (nonatomic, strong) NSDate *startTime;
 @end
 
 @implementation RunTimerViewController
@@ -35,16 +36,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidAppear:(BOOL)animated {
+    self.startTime = [NSDate date];
+    self.runTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/25
+                                                     target:self
+                                                   selector:@selector(updateTimer)
+                                                   userInfo:nil
+                                                    repeats:YES];
 }
-*/
+
+- (void)updateTimer {
+    NSDate *currentDate = [NSDate date];
+    NSTimeInterval elapsedTime = [currentDate timeIntervalSinceDate:self.startTime];
+    NSDate *time = [NSDate dateWithTimeIntervalSinceReferenceDate:elapsedTime];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"HH:mm:ss SSS";
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
+    
+    [self.runTimerLabel setText:[dateFormatter stringFromDate:time]];
+}
 
 - (IBAction)endRunTouched:(UIButton *)sender {
 }
