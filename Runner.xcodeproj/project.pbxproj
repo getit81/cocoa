@@ -27,6 +27,7 @@
 		4516170719BF1A3C00346DC9 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516170619BF1A3C00346DC9 /* RunnerTests.m */; };
 		4516171219BF1C6C00346DC9 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516171119BF1C6C00346DC9 /* Run.m */; };
 		451A943E19BF299800FC2076 /* RunTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451A943D19BF299800FC2076 /* RunTimerViewController.m */; };
+		4576416519C0755C00187843 /* RunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4576416419C0755C00187843 /* RunCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		4516171119BF1C6C00346DC9 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 		451A943C19BF299800FC2076 /* RunTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimerViewController.h; sourceTree = "<group>"; };
 		451A943D19BF299800FC2076 /* RunTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimerViewController.m; sourceTree = "<group>"; };
+		4576416319C0755C00187843 /* RunCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunCell.h; sourceTree = "<group>"; };
+		4576416419C0755C00187843 /* RunCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +185,7 @@
 		451A943F19BF29EC00FC2076 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4576416619C0756F00187843 /* Cells */,
 				451616EC19BF1A3C00346DC9 /* MyRunsViewController.h */,
 				451616ED19BF1A3C00346DC9 /* MyRunsViewController.m */,
 				451616EF19BF1A3C00346DC9 /* RunDetailsViewController.h */,
@@ -190,6 +194,15 @@
 				451A943D19BF299800FC2076 /* RunTimerViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4576416619C0756F00187843 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4576416319C0755C00187843 /* RunCell.h */,
+				4576416419C0755C00187843 /* RunCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451616F119BF1A3C00346DC9 /* RunDetailsViewController.m in Sources */,
+				4576416519C0755C00187843 /* RunCell.m in Sources */,
 				451616EE19BF1A3C00346DC9 /* MyRunsViewController.m in Sources */,
 				451616E519BF1A3C00346DC9 /* AppDelegate.m in Sources */,
 				4516171219BF1C6C00346DC9 /* Run.m in Sources */,

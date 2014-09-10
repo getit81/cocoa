@@ -9,6 +9,7 @@
 #import "MyRunsViewController.h"
 #import "RunDetailsViewController.h"
 #import "Run.h"
+#import "RunCell.h"
 
 @interface MyRunsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -194,8 +195,20 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    Run *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [object.date description];
+    NSDateFormatter *runDateFormatter = [[NSDateFormatter alloc] init];
+    [runDateFormatter setDateFormat:@"EEEE, dd.MM.Y"];
+    
+    NSDateFormatter *timeDateFormatter = [[NSDateFormatter alloc] init];
+    [timeDateFormatter setDateFormat:@"HH:mm:ss SSS"];
+    
+    timeDateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0.0];
+   
+    Run *runItem = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    RunCell *runCell = (RunCell *)cell;
+
+    [runCell.dateLabel setText:[runDateFormatter stringFromDate:runItem.date]];
+    [runCell.distanceLabel setText:[NSString stringWithFormat:@"Gelaufene Strecke: %.2f km", runItem.distance.floatValue]];
+    [runCell.timeLabel setText:[timeDateFormatter stringFromDate:runItem.time]];
 }
 
 @end
