@@ -9,6 +9,7 @@
 #import "RunTimerViewController.h"
 #import "AppDelegate.h"
 #import "Run.h"
+#import "RunDetailsViewController.h"
 
 @interface RunTimerViewController ()
 @property (nonatomic, strong) NSTimer *runTimer;
@@ -93,16 +94,21 @@
 - (IBAction)endRunTouched:(UIButton *)sender {
     self.runItem.distance = @(00.0);
     self.runItem.time = [self runnedTime];
-    
-    [self saveData];
     [self cancelTimer];
+    [self saveData];
 }
 
 - (IBAction)cancelRunTouched:(UIButton *)sender {
     [self.managedObjectContext deleteObject:self.runItem];
-    [self saveData];
-    
     [self cancelTimer];
+    [self saveData];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+        RunDetailsViewController *detailsVC = segue.destinationViewController;
+        [detailsVC setRunItem:self.runItem];
+    }
 }
 @end

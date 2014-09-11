@@ -28,24 +28,44 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
     if (self.runItem) {
-        self.detailDescriptionLabel.text = [self.runItem.date description];
+        NSDateFormatter *runDateFormatter = [[NSDateFormatter alloc] init];
+        [runDateFormatter setDateFormat:@"EEEE, dd.MM.Y"];
+        
+        NSDateFormatter *timeDateFormatter = [[NSDateFormatter alloc] init];
+        [timeDateFormatter setDateFormat:@"HH:mm:ss SSS"];
+        
+        [timeDateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
+        
+        [self.dateLabel setText:[runDateFormatter stringFromDate:self.runItem.date]];
+        [self.timeLabel setText:[timeDateFormatter stringFromDate:self.runItem.time]];
+        [self.distanceLabel setText:[NSString stringWithFormat:@"Strecke: %.2f km", self.runItem.distance.floatValue]];
+        [self.averageSpeedLabel setText:@"ø 3 km/h"];
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.navigationController.viewControllers.count < 3) {
+        return;
+    }
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Meine Läufe" style:UIBarButtonItemStylePlain target:self action:@selector(backToOverviewTouched)];
+    [self.navigationItem setLeftBarButtonItem:backButton];
+}
+
+- (void)backToOverviewTouched {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

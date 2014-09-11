@@ -12,6 +12,9 @@
 @interface RunDetailsViewController : UIViewController
 
 @property (strong, nonatomic) Run *runItem;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *averageSpeedLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
