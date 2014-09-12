@@ -7,6 +7,7 @@
 //
 
 #import "Run.h"
+#import "Coordinate.h"
 
 
 @implementation Run

@@ -10,12 +10,16 @@
 #import "AppDelegate.h"
 #import "Run.h"
 #import "RunDetailsViewController.h"
+#import "Coordinate.h"
 
-@interface RunTimerViewController ()
+@interface RunTimerViewController () <CLLocationManagerDelegate>
 @property (nonatomic, strong) NSTimer *runTimer;
 @property (nonatomic, strong) NSDate *startTime;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) Run *runItem;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic) double runnedMeters;
+@property (nonatomic, strong) CLLocation *lastLocation;
 @end
 
 @implementation RunTimerViewController
@@ -37,6 +41,11 @@
     self.managedObjectContext = appDelegate.managedObjectContext;
     
     self.runItem = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = 10.0;
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +86,10 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
     
     [self.runTimerLabel setText:[dateFormatter stringFromDate:time]];
+    
+    self.distanceLabel.text = [NSString stringWithFormat:@"Strecke: %.2f km", (self.runnedMeters / 1000.0)];
+    double timeInHours = [[self runnedTime] timeIntervalSinceReferenceDate] / 3600.0;
+    self.averageSpeedLabel.text = [NSString stringWithFormat:@"ø %.2f km/h", (self.runnedMeters / timeInHours)];
 }
 
 - (NSDate *)runnedTime {
@@ -87,6 +100,7 @@
 }
 
 - (void)cancelTimer {
+    [self.locationManager stopUpdatingLocation];
     [self.runTimer invalidate];
     self.runTimer = nil;
 }
@@ -110,5 +124,25 @@
         RunDetailsViewController *detailsVC = segue.destinationViewController;
         [detailsVC setRunItem:self.runItem];
     }
+}
+
+
+# pragma mark - CLLocation delegation
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *location = [locations lastObject];
+
+    Coordinate *coordinate = [NSEntityDescription insertNewObjectForEntityForName:@"Coordinate" inManagedObjectContext:self.managedObjectContext];
+    coordinate.latitude = @(location.coordinate.latitude);
+    coordinate.longitude = @(location.coordinate.longitude);
+    coordinate.time = [NSDate date];
+    coordinate.run = self.runItem;
+    
+    [self saveData];
+    
+    if (self.lastLocation) {
+        self.runnedMeters = [location distanceFromLocation:self.lastLocation];
+    }
+    self.lastLocation = location;
 }
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "RunDetailsViewController.h"
+#import "Coordinate.h"
 
 @interface RunDetailsViewController ()
+@property (nonatomic, strong) MKPolyline *routePolyLine;
+@property (nonatomic, strong) MKPolylineView *routePolyLineView;
 - (void)configureView;
 @end
 
@@ -37,10 +40,22 @@
         
         [timeDateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
         
-        [self.dateLabel setText:[runDateFormatter stringFromDate:self.runItem.date]];
-        [self.timeLabel setText:[timeDateFormatter stringFromDate:self.runItem.time]];
-        [self.distanceLabel setText:[NSString stringWithFormat:@"Strecke: %.2f km", self.runItem.distance.floatValue]];
-        [self.averageSpeedLabel setText:@"ø 3 km/h"];
+        self.dateLabel.text = [runDateFormatter stringFromDate:self.runItem.date];
+        self.timeLabel.text = [timeDateFormatter stringFromDate:self.runItem.time];
+        NSLog(@"Log in %@:%@, Distanz: %.2f", self, NSStringFromSelector(_cmd), self.runItem.distance.floatValue);
+        self.distanceLabel.text = [NSString stringWithFormat:@"Strecke: %.2f km", self.runItem.distance.floatValue];
+        self.averageSpeedLabel.text = @"ø 3 km/h";
+    
+        // Draw map polys
+        NSOrderedSet *coordinates = self.runItem.coordinates;
+        CLLocationCoordinate2D polyCoordinates[10000];
+        for (int i = 0; i < [coordinates count]; i++) {
+            Coordinate *coordinate = coordinates[i];
+            polyCoordinates[i] = CLLocationCoordinate2DMake(coordinate.latitude.doubleValue, coordinate.longitude.doubleValue);
+        }
+        self.routePolyLine = [MKPolyline polylineWithCoordinates:polyCoordinates count:[coordinates count]];
+        [self.runOverviewMap addOverlay:self.routePolyLine];
+        [self.runOverviewMap setVisibleMapRect:[self.routePolyLine boundingMapRect]];
     }
 }
 
@@ -66,6 +81,24 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+
+# pragma mark - MapView delegation
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
+    if (overlay != self.routePolyLine) {
+        return nil;
+    }
+    if (self.routePolyLineView) {
+        return self.routePolyLineView;
+    }
+    self.routePolyLineView = [[MKPolylineView alloc] initWithPolyline:self.routePolyLine];
+    self.routePolyLineView.fillColor = [UIColor redColor];
+    self.routePolyLineView.strokeColor = [UIColor redColor];
+    self.routePolyLineView.lineWidth = 5.0;
+    
+    return self.routePolyLineView;
 }
 
 @end

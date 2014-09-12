@@ -25,8 +25,11 @@
 		451616FD19BF1A3C00346DC9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451616D819BF1A3C00346DC9 /* CoreData.framework */; };
 		4516170519BF1A3C00346DC9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4516170319BF1A3C00346DC9 /* InfoPlist.strings */; };
 		4516170719BF1A3C00346DC9 /* RunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516170619BF1A3C00346DC9 /* RunnerTests.m */; };
-		4516171219BF1C6C00346DC9 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 4516171119BF1C6C00346DC9 /* Run.m */; };
 		451A943E19BF299800FC2076 /* RunTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451A943D19BF299800FC2076 /* RunTimerViewController.m */; };
+		452A9B7B19C1C7C400B7FA16 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9B7A19C1C7C400B7FA16 /* CoreLocation.framework */; };
+		452A9B7D19C1C80D00B7FA16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452A9B7C19C1C80D00B7FA16 /* MapKit.framework */; };
+		452A9B8619C1D0CC00B7FA16 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452A9B8519C1D0CC00B7FA16 /* Coordinate.m */; };
+		452A9B8919C1D0CD00B7FA16 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 452A9B8819C1D0CD00B7FA16 /* Run.m */; };
 		4576416519C0755C00187843 /* RunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4576416419C0755C00187843 /* RunCell.m */; };
 /* End PBXBuildFile section */
 
@@ -64,10 +67,14 @@
 		4516170219BF1A3C00346DC9 /* RunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RunnerTests-Info.plist"; sourceTree = "<group>"; };
 		4516170419BF1A3C00346DC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4516170619BF1A3C00346DC9 /* RunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunnerTests.m; sourceTree = "<group>"; };
-		4516171019BF1C6C00346DC9 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
-		4516171119BF1C6C00346DC9 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 		451A943C19BF299800FC2076 /* RunTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimerViewController.h; sourceTree = "<group>"; };
 		451A943D19BF299800FC2076 /* RunTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimerViewController.m; sourceTree = "<group>"; };
+		452A9B7A19C1C7C400B7FA16 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		452A9B7C19C1C80D00B7FA16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		452A9B8419C1D0CC00B7FA16 /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Coordinate.h; path = ../Coordinate.h; sourceTree = "<group>"; };
+		452A9B8519C1D0CC00B7FA16 /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Coordinate.m; path = ../Coordinate.m; sourceTree = "<group>"; };
+		452A9B8719C1D0CD00B7FA16 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = ../Run.h; sourceTree = "<group>"; };
+		452A9B8819C1D0CD00B7FA16 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Run.m; path = ../Run.m; sourceTree = "<group>"; };
 		4576416319C0755C00187843 /* RunCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunCell.h; sourceTree = "<group>"; };
 		4576416419C0755C00187843 /* RunCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452A9B7D19C1C80D00B7FA16 /* MapKit.framework in Frameworks */,
+				452A9B7B19C1C7C400B7FA16 /* CoreLocation.framework in Frameworks */,
 				451616D519BF1A3C00346DC9 /* CoreGraphics.framework in Frameworks */,
 				451616D919BF1A3C00346DC9 /* CoreData.framework in Frameworks */,
 				451616D719BF1A3C00346DC9 /* UIKit.framework in Frameworks */,
@@ -120,6 +129,8 @@
 		451616D119BF1A3C00346DC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				452A9B7C19C1C80D00B7FA16 /* MapKit.framework */,
+				452A9B7A19C1C7C400B7FA16 /* CoreLocation.framework */,
 				451616D219BF1A3C00346DC9 /* Foundation.framework */,
 				451616D419BF1A3C00346DC9 /* CoreGraphics.framework */,
 				451616D619BF1A3C00346DC9 /* UIKit.framework */,
@@ -176,8 +187,10 @@
 		4516171319BF1C7900346DC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4516171019BF1C6C00346DC9 /* Run.h */,
-				4516171119BF1C6C00346DC9 /* Run.m */,
+				452A9B8719C1D0CD00B7FA16 /* Run.h */,
+				452A9B8819C1D0CD00B7FA16 /* Run.m */,
+				452A9B8419C1D0CC00B7FA16 /* Coordinate.h */,
+				452A9B8519C1D0CC00B7FA16 /* Coordinate.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -302,11 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452A9B8919C1D0CD00B7FA16 /* Run.m in Sources */,
 				451616F119BF1A3C00346DC9 /* RunDetailsViewController.m in Sources */,
 				4576416519C0755C00187843 /* RunCell.m in Sources */,
+				452A9B8619C1D0CC00B7FA16 /* Coordinate.m in Sources */,
 				451616EE19BF1A3C00346DC9 /* MyRunsViewController.m in Sources */,
 				451616E519BF1A3C00346DC9 /* AppDelegate.m in Sources */,
-				4516171219BF1C6C00346DC9 /* Run.m in Sources */,
 				451A943E19BF299800FC2076 /* RunTimerViewController.m in Sources */,
 				451616E119BF1A3C00346DC9 /* main.m in Sources */,
 				451616EB19BF1A3C00346DC9 /* Runner.xcdatamodeld in Sources */,
