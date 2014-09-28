@@ -21,6 +21,7 @@
 		451D549B19D5AEA1008AD254 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451D547D19D5AEA0008AD254 /* UIKit.framework */; };
 		451D54A319D5AEA1008AD254 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 451D54A119D5AEA1008AD254 /* InfoPlist.strings */; };
 		451D54A519D5AEA1008AD254 /* Kapitel2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 451D54A419D5AEA1008AD254 /* Kapitel2Tests.m */; };
+		455FEEDB19D8630600AC4876 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FEEDA19D8630600AC4876 /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		451D54A019D5AEA1008AD254 /* Kapitel2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kapitel2Tests-Info.plist"; sourceTree = "<group>"; };
 		451D54A219D5AEA1008AD254 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		451D54A419D5AEA1008AD254 /* Kapitel2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kapitel2Tests.m; sourceTree = "<group>"; };
+		455FEED919D8630600AC4876 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		455FEEDA19D8630600AC4876 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				451D548B19D5AEA1008AD254 /* Main.storyboard */,
 				451D548E19D5AEA1008AD254 /* ViewController.h */,
 				451D548F19D5AEA1008AD254 /* ViewController.m */,
+				455FEED919D8630600AC4876 /* Model.h */,
+				455FEEDA19D8630600AC4876 /* Model.m */,
 				451D549119D5AEA1008AD254 /* Images.xcassets */,
 				451D548019D5AEA1008AD254 /* Supporting Files */,
 			);
@@ -252,6 +257,7 @@
 				451D549019D5AEA1008AD254 /* ViewController.m in Sources */,
 				451D548A19D5AEA1008AD254 /* AppDelegate.m in Sources */,
 				451D548619D5AEA1008AD254 /* main.m in Sources */,
+				455FEEDB19D8630600AC4876 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +462,7 @@
 				451D54AA19D5AEA1008AD254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		451D54AB19D5AEA1008AD254 /* Build configuration list for PBXNativeTarget "Kapitel2Tests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				451D54AD19D5AEA1008AD254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
