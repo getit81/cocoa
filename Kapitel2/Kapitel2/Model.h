@@ -14,4 +14,8 @@
 @property (strong) NSDate *creation;
 @property (copy) NSString *name;
 
+- (instancetype)initWithName:(NSString *)inName;
+- (void)updateDroids:(int)inValue;
+- (int)countOfObjects;
+
 @end
