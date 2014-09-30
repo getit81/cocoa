@@ -23,6 +23,9 @@
 		451D54A519D5AEA1008AD254 /* Kapitel2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 451D54A419D5AEA1008AD254 /* Kapitel2Tests.m */; };
 		45341E1019D9867B00E4EF0B /* Droid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45341E0F19D9867B00E4EF0B /* Droid.m */; };
 		455FEEDB19D8630600AC4876 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FEEDA19D8630600AC4876 /* Model.m */; };
+		45A2579819DAB148003BA833 /* ProtocolDroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A2579719DAB148003BA833 /* ProtocolDroid.m */; };
+		45A2579B19DAB1B0003BA833 /* AstroDroid.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A2579A19DAB1B0003BA833 /* AstroDroid.m */; };
+		45E1E82319DAC5D800CC49EA /* Wookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E1E82219DAC5D800CC49EA /* Wookie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,12 @@
 		45341E0F19D9867B00E4EF0B /* Droid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Droid.m; sourceTree = "<group>"; };
 		455FEED919D8630600AC4876 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		455FEEDA19D8630600AC4876 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		45A2579619DAB148003BA833 /* ProtocolDroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolDroid.h; sourceTree = "<group>"; };
+		45A2579719DAB148003BA833 /* ProtocolDroid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolDroid.m; sourceTree = "<group>"; };
+		45A2579919DAB1B0003BA833 /* AstroDroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstroDroid.h; sourceTree = "<group>"; };
+		45A2579A19DAB1B0003BA833 /* AstroDroid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstroDroid.m; sourceTree = "<group>"; };
+		45E1E82119DAC5D800CC49EA /* Wookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wookie.h; sourceTree = "<group>"; };
+		45E1E82219DAC5D800CC49EA /* Wookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wookie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,15 +129,21 @@
 			children = (
 				451D548819D5AEA1008AD254 /* AppDelegate.h */,
 				451D548919D5AEA1008AD254 /* AppDelegate.m */,
-				451D548B19D5AEA1008AD254 /* Main.storyboard */,
-				451D548E19D5AEA1008AD254 /* ViewController.h */,
-				451D548F19D5AEA1008AD254 /* ViewController.m */,
+				45A2579919DAB1B0003BA833 /* AstroDroid.h */,
+				45A2579A19DAB1B0003BA833 /* AstroDroid.m */,
 				45341E0E19D9867B00E4EF0B /* Droid.h */,
 				45341E0F19D9867B00E4EF0B /* Droid.m */,
+				451D549119D5AEA1008AD254 /* Images.xcassets */,
+				451D548B19D5AEA1008AD254 /* Main.storyboard */,
 				455FEED919D8630600AC4876 /* Model.h */,
 				455FEEDA19D8630600AC4876 /* Model.m */,
-				451D549119D5AEA1008AD254 /* Images.xcassets */,
+				45E1E82119DAC5D800CC49EA /* Wookie.h */,
+				45E1E82219DAC5D800CC49EA /* Wookie.m */,
+				45A2579619DAB148003BA833 /* ProtocolDroid.h */,
+				45A2579719DAB148003BA833 /* ProtocolDroid.m */,
 				451D548019D5AEA1008AD254 /* Supporting Files */,
+				451D548E19D5AEA1008AD254 /* ViewController.h */,
+				451D548F19D5AEA1008AD254 /* ViewController.m */,
 			);
 			path = Kapitel2;
 			sourceTree = "<group>";
@@ -259,11 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A2579819DAB148003BA833 /* ProtocolDroid.m in Sources */,
+				45E1E82319DAC5D800CC49EA /* Wookie.m in Sources */,
 				451D549019D5AEA1008AD254 /* ViewController.m in Sources */,
 				451D548A19D5AEA1008AD254 /* AppDelegate.m in Sources */,
 				451D548619D5AEA1008AD254 /* main.m in Sources */,
 				45341E1019D9867B00E4EF0B /* Droid.m in Sources */,
 				455FEEDB19D8630600AC4876 /* Model.m in Sources */,
+				45A2579B19DAB1B0003BA833 /* AstroDroid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

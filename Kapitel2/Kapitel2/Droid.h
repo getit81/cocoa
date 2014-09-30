@@ -12,6 +12,7 @@
 
 @property (copy) NSString *droidID;
 
-- (id)initWithID:(int)inID;
+- (instancetype)initWithID:(int)inID;
+- (void)sayName;
 
 @end
