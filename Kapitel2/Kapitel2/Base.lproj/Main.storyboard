@@ -53,6 +53,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="countLabel" destination="u4E-Rb-Eya" id="54h-BU-K75"/>
                         <outlet property="textView" destination="ooJ-b2-jWp" id="qGg-Ti-IQL"/>
                     </connections>
                 </viewController>

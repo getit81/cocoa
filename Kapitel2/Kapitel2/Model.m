@@ -47,6 +47,7 @@
 }
 
 - (void)updateDroids:(int)inValue {
+    [self willChangeValueForKey:@"countOfObjects"];
 	if (inValue > [objects count]) {
 		int theRemainder = inValue % 3;
 		Droid *theDroid;
@@ -63,6 +64,7 @@
 	} else {
 		[objects removeLastObject];
 	}
+    [self didChangeValueForKey:@"countOfObjects"];
 }
 
 - (int)countOfObjects {

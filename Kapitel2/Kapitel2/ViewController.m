@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *countLabel;
+
 @end
 
 @implementation ViewController
@@ -27,10 +29,13 @@
     [self.model addObserver:self forKeyPath:@"status"
                     options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
                     context:@"Bla"];
+    [self.model addObserver:self forKeyPath:@"countOfObjects"
+                    options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self removeObserver:self forKeyPath:@"status"];
+    [self removeObserver:self forKeyPath:@"countOfObjects"];
     [super viewWillDisappear:animated];
 }
 
@@ -67,6 +72,8 @@
         NSLog(@"[+] Old status: %@", [change valueForKey:NSKeyValueChangeOldKey]);
         NSLog(@"[+] New status: %@", [change valueForKey:NSKeyValueChangeNewKey]);
         NSLog(@"[+] Context: %@", context);
+    } else if ([keyPath isEqualToString:@"countOfObjects"]) {
+        [self.countLabel setText:[NSString stringWithFormat:@"%d", [object countOfObjects]]];
     }
 }
 
