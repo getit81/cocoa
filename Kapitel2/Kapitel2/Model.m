@@ -32,8 +32,8 @@
 - (instancetype)init {
 	self = [super init];
 	if (self) {
-		self.creation = [NSDate date];
-		self.objects = [[NSMutableArray alloc] init];
+        [self setCreation:[NSDate date]];
+        [self setObjects:[[NSMutableArray alloc] init]];
 	}
 	return self;
 }
