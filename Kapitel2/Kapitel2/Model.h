@@ -10,9 +10,9 @@
 
 @interface Model : NSObject
 
-@property (copy) NSString *status;
-@property (strong) NSDate *creation;
-@property (copy) NSString *name;
+@property(copy) NSString *status;
+@property(strong) NSDate *creation;
+@property(copy) NSString *name;
 
 - (instancetype)initWithName:(NSString *)inName;
 - (void)updateDroids:(int)inValue;

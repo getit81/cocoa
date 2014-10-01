@@ -10,7 +10,7 @@
 
 @interface Droid : NSObject
 
-@property (copy) NSString *droidID;
+@property(copy) NSString *droidID;
 
 - (instancetype)initWithID:(int)inID;
 - (void)sayName;

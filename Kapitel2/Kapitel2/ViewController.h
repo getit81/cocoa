@@ -11,8 +11,8 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
-@property (strong) Model *model;
+@property(weak, nonatomic) IBOutlet UITextView *textView;
+@property(strong) Model *model;
 
 - (IBAction)updateCountOfDroids:(UIStepper *)sender;
 

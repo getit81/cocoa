@@ -14,39 +14,39 @@
 
 @implementation ViewController
 
-	- (void)viewDidLoad {
-		[super viewDidLoad];
-		[self.textView setText:@""];
-		[self writeLog:NSStringFromSelector(_cmd)];
-		[self setModel:[[Model alloc] initWithName:@"LoremIpsum"]];
-		[self writeLog:[NSString stringWithFormat:@"Model.name: %@", [self.model name]]];
-	}
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	[self.textView setText:@""];
+	[self writeLog:NSStringFromSelector(_cmd)];
+	[self setModel:[[Model alloc] initWithName:@"LoremIpsum"]];
+	[self writeLog:[NSString stringWithFormat:@"Model.name: %@", [self.model name]]];
+}
 
-	- (void)didReceiveMemoryWarning {
-		[super didReceiveMemoryWarning];
-		// Dispose of any resources that can be recreated.
-	}
+- (void)didReceiveMemoryWarning {
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
+}
 
-	- (void)writeLog:(NSString *)inLogString {
-		NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
-		NSDateFormatter *theFormatter = [[NSDateFormatter alloc] init];
+- (void)writeLog:(NSString *)inLogString {
+	NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
+	NSDateFormatter *theFormatter = [[NSDateFormatter alloc] init];
 
-		[theFormatter setDateFormat:@"HH:mm:ss.SSS"];
-		[self.textView setText:[NSString stringWithFormat:@"%@\n%@ [+] %@",
-														  [self.textView text],
-														  [theFormatter stringFromDate:[NSDate date]],
-														  inLogString]];
-	}
+	[theFormatter setDateFormat:@"HH:mm:ss.SSS"];
+	[self.textView setText:[NSString stringWithFormat:@"%@\n%@ [+] %@",
+													  [self.textView text],
+													  [theFormatter stringFromDate:[NSDate date]],
+													  inLogString]];
+}
 
-	- (IBAction)updateCountOfDroids:(UIStepper *)sender {
-		int theValue = [sender value];
+- (IBAction)updateCountOfDroids:(UIStepper *)sender {
+	int theValue = [sender value];
 
-		[self.model updateDroids:theValue];
-		[self writeLog:[NSString stringWithFormat:@"countOfObjects = %d", [self.model countOfObjects]]];
-	}
+	[self.model updateDroids:theValue];
+	[self writeLog:[NSString stringWithFormat:@"countOfObjects = %d", [self.model countOfObjects]]];
+}
 
 - (IBAction)listModel:(id)sender {
-    [self.model listDroids];
+	[self.model listDroids];
 }
 
 @end

@@ -10,7 +10,7 @@
 
 @interface Wookie : NSObject
 
-@property (copy) NSString *name;
+@property(copy) NSString *name;
 
 - (id)initWithName:(NSString *)inName;
 - (void)sayName;

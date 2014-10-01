@@ -11,15 +11,15 @@
 @implementation Wookie
 
 - (id)initWithName:(NSString *)inName {
-    self = [super init];
-    if (self) {
-        [self setName:inName];
-    }
-    NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
-    return self;
+	self = [super init];
+	if (self) {
+		[self setName:inName];
+	}
+	NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
+	return self;
 }
 
 - (void)sayName {
-    NSLog(@"[+]    %@.%@: %@", self, NSStringFromSelector(_cmd), [self name]);
+	NSLog(@"[+]    %@.%@: %@", self, NSStringFromSelector(_cmd), [self name]);
 }
 @end

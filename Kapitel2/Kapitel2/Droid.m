@@ -13,16 +13,16 @@
 @synthesize droidID;
 
 - (instancetype)initWithID:(int)inID {
-    self = [super init];
-    if (self) {
-        [self setDroidID:[NSString stringWithFormat:@"0xDEADBEEF%i", inID]];
-    }
-    NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
-    return self;
+	self = [super init];
+	if (self) {
+		[self setDroidID:[NSString stringWithFormat:@"0xDEADBEEF%i", inID]];
+	}
+	NSLog(@"[+] %@.%@", self, NSStringFromSelector(_cmd));
+	return self;
 }
 
 - (void)sayName {
-    NSLog(@"[+]    %@.%@: %@", self, NSStringFromSelector(_cmd), [self droidID]);
+	NSLog(@"[+]    %@.%@: %@", self, NSStringFromSelector(_cmd), [self droidID]);
 }
 
 @end
