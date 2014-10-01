@@ -58,6 +58,7 @@
 		} else {
 			theDroid = [[AstroDroid alloc] initWithID:inValue];
 		}
+        self.status = theDroid.droidID;
 		[objects addObject:theDroid];
 	} else {
 		[objects removeLastObject];

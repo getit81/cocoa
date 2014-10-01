@@ -22,6 +22,18 @@
 	[self writeLog:[NSString stringWithFormat:@"Model.name: %@", [self.model name]]];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.model addObserver:self forKeyPath:@"status"
+                    options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                    context:@"Bla"];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self removeObserver:self forKeyPath:@"status"];
+    [super viewWillDisappear:animated];
+}
+
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
@@ -47,6 +59,15 @@
 
 - (IBAction)listModel:(id)sender {
 	[self.model listDroids];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+                        change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"status"]) {
+        NSLog(@"[+] Old status: %@", [change valueForKey:NSKeyValueChangeOldKey]);
+        NSLog(@"[+] New status: %@", [change valueForKey:NSKeyValueChangeNewKey]);
+        NSLog(@"[+] Context: %@", context);
+    }
 }
 
 @end
