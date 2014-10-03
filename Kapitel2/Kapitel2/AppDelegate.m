@@ -37,4 +37,8 @@
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    NSLog(@"%@.%@ Einen Einmer für Monsieur!", self, NSStringFromSelector(_cmd));
+}
+
 @end
