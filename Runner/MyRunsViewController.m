@@ -199,7 +199,7 @@
     [runDateFormatter setDateFormat:@"EEEE, dd.MM.Y"];
     
     NSDateFormatter *timeDateFormatter = [[NSDateFormatter alloc] init];
-    [timeDateFormatter setDateFormat:@"HH:mm:ss SSS"];
+    [timeDateFormatter setDateFormat:@"HH:mm:ss"];
     
     timeDateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0.0];
    
@@ -207,7 +207,7 @@
     RunCell *runCell = (RunCell *)cell;
 
     [runCell.dateLabel setText:[runDateFormatter stringFromDate:runItem.date]];
-    [runCell.distanceLabel setText:[NSString stringWithFormat:@"Gelaufene Strecke: %.2f km", runItem.distance.floatValue]];
+    [runCell.distanceLabel setText:[[NSString alloc] initWithFormat:@"Gelaufene Strecke: %.2f km" locale:[NSLocale currentLocale], runItem.distance.floatValue]];
     [runCell.timeLabel setText:[timeDateFormatter stringFromDate:runItem.time]];
 }
 

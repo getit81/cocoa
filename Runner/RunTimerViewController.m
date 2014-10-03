@@ -106,8 +106,9 @@
 }
 
 - (IBAction)endRunTouched:(UIButton *)sender {
-    self.runItem.distance = @(00.0);
-    self.runItem.time = [self runnedTime];
+    NSNumber *distance = [NSNumber numberWithDouble:(self.runnedMeters / 1000.0)];
+    [self.runItem setDistance:distance];
+    [self.runItem setTime:[self runnedTime]];
     [self cancelTimer];
     [self saveData];
 }
@@ -141,7 +142,7 @@
     [self saveData];
     
     if (self.lastLocation) {
-        self.runnedMeters = [location distanceFromLocation:self.lastLocation];
+        self.runnedMeters += [location distanceFromLocation:self.lastLocation];
     }
     self.lastLocation = location;
 }

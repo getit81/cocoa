@@ -36,15 +36,20 @@
         [runDateFormatter setDateFormat:@"EEEE, dd.MM.Y"];
         
         NSDateFormatter *timeDateFormatter = [[NSDateFormatter alloc] init];
-        [timeDateFormatter setDateFormat:@"HH:mm:ss SSS"];
+        [timeDateFormatter setDateFormat:@"HH:mm:ss"];
         
         [timeDateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
         
-        self.dateLabel.text = [runDateFormatter stringFromDate:self.runItem.date];
-        self.timeLabel.text = [timeDateFormatter stringFromDate:self.runItem.time];
+        [self.dateLabel setText:[runDateFormatter stringFromDate:self.runItem.date]];
+        [self.timeLabel setText:[timeDateFormatter stringFromDate:self.runItem.time]];
         NSLog(@"Log in %@:%@, Distanz: %.2f", self, NSStringFromSelector(_cmd), self.runItem.distance.floatValue);
-        self.distanceLabel.text = [NSString stringWithFormat:@"Strecke: %.2f km", self.runItem.distance.floatValue];
-        self.averageSpeedLabel.text = @"ø 3 km/h";
+        [self.distanceLabel setText:[[NSString alloc] initWithFormat:@"Strecke: %.2f km" locale:[NSLocale currentLocale], self.runItem.distance.floatValue]];
+        
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        [calendar setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
+        NSDateComponents *components = [calendar components:NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit fromDate:self.runItem.time];
+        float runnedHours = (float)[components hour] + ((float)[components minute] / 60.0) + ((float)[components second] / 3600);
+        [self.averageSpeedLabel setText:[NSString stringWithFormat:@"ø %.2f km/h", self.runItem.distance.floatValue / runnedHours]];
     
         // Draw map polys
         NSOrderedSet *coordinates = self.runItem.coordinates;
