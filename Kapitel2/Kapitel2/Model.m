@@ -20,8 +20,8 @@
 
 
 @implementation Model {
-    @private
-	NSMutableArray *objects;
+//    @private
+//	NSMutableArray *objects;
 }
 
 @synthesize status;
