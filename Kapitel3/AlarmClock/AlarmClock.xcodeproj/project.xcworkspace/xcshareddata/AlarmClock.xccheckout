@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>99B13C7C-462E-4094-ADEC-7D1EA73E4DAA</string>
+	<string>2D3D6815-9278-49F0-AAED-D3DE31D6736B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AlarmClock</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>BC8BED45-A1C9-46FF-AE77-287DEF1EF25D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>buch</string>
+			<string>AlarmClock</string>
 		</dict>
 	</array>
 </dict>

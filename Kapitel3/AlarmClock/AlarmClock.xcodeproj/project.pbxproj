@@ -21,6 +21,7 @@
 		456D458819E2B8510000252E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456D456A19E2B8510000252E /* UIKit.framework */; };
 		456D459019E2B8510000252E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 456D458E19E2B8510000252E /* InfoPlist.strings */; };
 		456D459219E2B8510000252E /* AlarmClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D459119E2B8510000252E /* AlarmClockTests.m */; };
+		456D459D19E2B8C80000252E /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D459C19E2B8C80000252E /* ClockView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		456D458D19E2B8510000252E /* AlarmClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlarmClockTests-Info.plist"; sourceTree = "<group>"; };
 		456D458F19E2B8510000252E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		456D459119E2B8510000252E /* AlarmClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmClockTests.m; sourceTree = "<group>"; };
+		456D459B19E2B8C80000252E /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
+		456D459C19E2B8C80000252E /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +117,13 @@
 			children = (
 				456D457519E2B8510000252E /* AlarmClockAppDelegate.h */,
 				456D457619E2B8510000252E /* AlarmClockAppDelegate.m */,
-				456D457819E2B8510000252E /* Main.storyboard */,
 				456D457B19E2B8510000252E /* AlarmClockViewController.h */,
 				456D457C19E2B8510000252E /* AlarmClockViewController.m */,
 				456D457E19E2B8510000252E /* Images.xcassets */,
+				456D457819E2B8510000252E /* Main.storyboard */,
 				456D456D19E2B8510000252E /* Supporting Files */,
+				456D459B19E2B8C80000252E /* ClockView.h */,
+				456D459C19E2B8C80000252E /* ClockView.m */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456D457319E2B8510000252E /* main.m in Sources */,
+				456D459D19E2B8C80000252E /* ClockView.m in Sources */,
 				456D457D19E2B8510000252E /* AlarmClockViewController.m in Sources */,
 				456D457719E2B8510000252E /* AlarmClockAppDelegate.m in Sources */,
 			);
