@@ -64,8 +64,14 @@
     CGContextFillPath(theContext);
     CGContextAddEllipseInRect(theContext, theBounds);
     CGContextClip(theContext);
-    CGContextSetRGBStrokeColor(theContext, 0.25, 0.25, 0.25, 1.0);
-    CGContextSetRGBFillColor(theContext, 0.25, 0.25, 0.25, 1.0);
+    if ([self respondsToSelector:@selector(tintColor)]) {
+        UIColor *theColor = self.tintColor;
+        CGContextSetStrokeColorWithColor(theContext, theColor.CGColor);
+        CGContextSetFillColorWithColor(theContext, theColor.CGColor);
+    } else {
+        CGContextSetRGBStrokeColor(theContext, 0.25, 0.25, 0.25, 1.0);
+        CGContextSetRGBFillColor(theContext, 0.25, 0.25, 0.25, 1.0);
+    }
     CGContextSetLineWidth(theContext, theRadius / 20.0);
     CGContextSetLineCap(theContext, kCGLineCapRound);
     for (NSInteger i = 0; i < 60; ++i) {
@@ -142,6 +148,11 @@
 
 - (void)updateTime:(NSTimer *)inTimer {
     [self setTime:[NSDate date]];
+    [self setNeedsDisplay];
+}
+
+- (void)tintColorDidChange {
+    [super tintColorDidChange];
     [self setNeedsDisplay];
 }
 
