@@ -119,11 +119,11 @@
 				456D457619E2B8510000252E /* AlarmClockAppDelegate.m */,
 				456D457B19E2B8510000252E /* AlarmClockViewController.h */,
 				456D457C19E2B8510000252E /* AlarmClockViewController.m */,
+				456D459B19E2B8C80000252E /* ClockView.h */,
+				456D459C19E2B8C80000252E /* ClockView.m */,
 				456D457E19E2B8510000252E /* Images.xcassets */,
 				456D457819E2B8510000252E /* Main.storyboard */,
 				456D456D19E2B8510000252E /* Supporting Files */,
-				456D459B19E2B8C80000252E /* ClockView.h */,
-				456D459C19E2B8C80000252E /* ClockView.m */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -463,6 +463,7 @@
 				456D459719E2B8510000252E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		456D459819E2B8510000252E /* Build configuration list for PBXNativeTarget "AlarmClockTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +472,7 @@
 				456D459A19E2B8510000252E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
