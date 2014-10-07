@@ -10,13 +10,22 @@
 
 @implementation ClockView
 
+// wird nur aufgerufen, wenn View im Code erzeugt wird
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-
+        self.calendar = [NSCalendar currentCalendar];
+        self.time = [NSDate date];
     }
     return self;
+}
+
+// wird nur aufgerufen, wenn View im Storyboard erzeugt wird
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.calendar = [NSCalendar currentCalendar];
+    self.time = [NSDate date];
 }
 
 - (CGPoint)midPoint {
