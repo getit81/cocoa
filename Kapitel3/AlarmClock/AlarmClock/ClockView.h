@@ -13,4 +13,7 @@
 @property (nonatomic, strong) NSDate *time;
 @property (nonatomic, strong) NSCalendar *calendar;
 
+- (void)startAnimation;
+- (void)stopAnimation;
+
 @end
