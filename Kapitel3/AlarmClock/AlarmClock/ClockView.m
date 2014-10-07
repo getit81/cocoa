@@ -66,13 +66,13 @@
     CGContextClip(theContext);
     CGContextSetRGBStrokeColor(theContext, 0.25, 0.25, 0.25, 1.0);
     CGContextSetRGBFillColor(theContext, 0.25, 0.25, 0.25, 1.0);
-    CGContextSetLineWidth(theContext, 8.0);
+    CGContextSetLineWidth(theContext, theRadius / 20.0);
     CGContextSetLineCap(theContext, kCGLineCapRound);
-    for (int i = 0; i < 60; ++i) {
+    for (NSInteger i = 0; i < 60; ++i) {
         CGFloat theAngle = i * M_PI / 30.0;
         
         if (i % 5 == 0) {
-            CGFloat theInnerRadius = theRadius * ((i % 15 == 0) ? 0.7 : 0.8);
+            CGFloat theInnerRadius = theRadius * (i % 15 == 0 ? 0.7 : 0.8);
             CGPoint theInnerPoint = [self pointWithRadius:theInnerRadius angle:theAngle];
             CGPoint theOuterPoint = [self pointWithRadius:theRadius angle:theAngle];
             CGContextMoveToPoint(theContext, theInnerPoint.x, theInnerPoint.y);
@@ -80,7 +80,7 @@
             CGContextStrokePath(theContext);
         } else {
             CGPoint thePoint = [self pointWithRadius:theRadius * 0.95 angle:theAngle];
-            CGContextAddArc(theContext, thePoint.x, thePoint.y, 3.0, 0.0, 2 * M_PI, YES);
+            CGContextAddArc(theContext, thePoint.x, thePoint.y, theRadius / 40.0, 0.0, 2 * M_PI, YES);
             CGContextFillPath(theContext);
         }
     }
@@ -103,7 +103,7 @@
     // Stundenzeiger zeichnen
     CGPoint thePoint = [self pointWithRadius:theRadius * 0.7 angle:theHour];
     CGContextSetRGBStrokeColor(theContext, 0.25, 0.25, 0.25, 1.0);
-    CGContextSetLineWidth(theContext, 8.0);
+    CGContextSetLineWidth(theContext, theRadius / 20.0);
     CGContextSetLineCap(theContext, kCGLineCapButt);
     CGContextMoveToPoint(theContext, theCenter.x, theCenter.y);
     CGContextAddLineToPoint(theContext, thePoint.x, thePoint.y);
@@ -111,14 +111,14 @@
     
     // Minutenzeiger zeichnen
     thePoint = [self pointWithRadius:theRadius * 0.9 angle:theMinute];
-    CGContextSetLineWidth(theContext, 4.0);
+    CGContextSetLineWidth(theContext, theRadius / 40.0);
     CGContextMoveToPoint(theContext, theCenter.x, theCenter.y);
     CGContextAddLineToPoint(theContext, thePoint.x, thePoint.y);
     CGContextStrokePath(theContext);
     
     // Sekundenzeiger zeichnen
     thePoint = [self pointWithRadius:theRadius * 0.95 angle:theSecond];
-    CGContextSetLineWidth(theContext, 2.0);
+    CGContextSetLineWidth(theContext, theRadius / 80.0);
     CGContextSetRGBStrokeColor(theContext, 1.0, 0.0, 0.0, 1.0);
     CGContextMoveToPoint(theContext, theCenter.x, theCenter.y);
     CGContextAddLineToPoint(theContext, thePoint.x, thePoint.y);
