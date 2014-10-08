@@ -11,8 +11,6 @@
 
 @interface AlarmClockViewController ()
 
-@property (strong, nonatomic) IBOutletCollection(ClockView) NSArray *clockViews;
-
 @end
 
 @implementation AlarmClockViewController
@@ -31,14 +29,18 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    for (ClockView *theView in self.clockViews) {
-        [theView startAnimation];
+    for (ClockView *theView in self.view.subviews) {
+        if ([theView respondsToSelector:@selector(startAnimation)]) {
+            [theView startAnimation];
+        }
     }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    for (ClockView *theView in self.clockViews) {
-        [theView stopAnimation];
+    for (ClockView *theView in self.view.subviews) {
+        if ([theView respondsToSelector:@selector(stopAnimation)]) {
+            [theView stopAnimation];
+        }
     }
     [super viewWillDisappear:animated];
 }
