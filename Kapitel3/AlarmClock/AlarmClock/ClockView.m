@@ -32,11 +32,11 @@
     [super awakeFromNib];
     self.calendar = [NSCalendar currentCalendar];
     self.time = [NSDate date];
-    [self startAnimation];
+//    [self startAnimation];
 }
 
 - (void)dealloc {
-    [self stopAnimation];
+//    [self stopAnimation];
 }
 
 - (CGPoint)midPoint {

@@ -7,8 +7,11 @@
 //
 
 #import "AlarmClockViewController.h"
+#import "ClockView.h"
 
 @interface AlarmClockViewController ()
+
+@property (strong, nonatomic) IBOutletCollection(ClockView) NSArray *clockViews;
 
 @end
 
@@ -24,6 +27,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    for (ClockView *theView in self.clockViews) {
+        [theView startAnimation];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    for (ClockView *theView in self.clockViews) {
+        [theView stopAnimation];
+    }
+    [super viewWillDisappear:animated];
 }
 
 @end

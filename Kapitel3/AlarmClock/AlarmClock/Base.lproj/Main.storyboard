@@ -40,6 +40,12 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outletCollection property="clockViews" destination="jeQ-DI-0fj" id="GWv-RP-Ceh"/>
+                        <outletCollection property="clockViews" destination="Yit-cg-MSR" id="Rgg-da-sEo"/>
+                        <outletCollection property="clockViews" destination="sRN-bs-Heu" id="Fte-w4-A5N"/>
+                        <outletCollection property="clockViews" destination="XBf-sk-eHz" id="U67-To-E5r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
